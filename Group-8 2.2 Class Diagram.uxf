@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text>// Uncomment the following line to change the fontsize and font:
+fontsize=10
+// fontfamily=SansSerif //possible: SansSerif,Serif,Monospaced
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Welcome to UMLet!
+//
+// Double-click on elements to add them to the diagram, or to copy them
+// Edit elements by modifying the text in this panel
+// Hold Ctrl to select multiple elements
+// Use Ctrl+mouse to select via lasso
+//
+// Use +/- or Ctrl+mouse wheel to zoom
+// Drag a whole relation at its central square icon
+//
+// Press Ctrl+C to copy the whole diagram to the system clipboard (then just paste it to, eg, Word)
+// Edit the files in the "palettes" directory to create your own element palettes
+//
+// Select "Custom Elements &gt; New..." to create new element types
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// This text will be stored with each diagram;  use it for notes.</help_text>
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>50</x>
+      <y>80</y>
+      <w>220</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>Admin Class
+--
+          -admin_id: int
+          -admin_name: string
+          -admin_password: string
+          -admin_email: string
+          -admin_dob: date
+          -admin_address: string
+--
+          
+           +verifyPass()
+           +editDetails()
+           +browseData()
+           +addCrop()
+           +editCrop()
+           +deleteCrop()
+           +addLivestock()
+           +editLivestock()
+           +deleteLivestock()
+           +addEquipment()
+           +editEquipment()
+           +deleteEquipment()
+           +add_user()
+           +edit_user()
+           +delete_user()
+           +search_user()
+           +showUserList()
+           +showAllUserHistory()
+           
+           </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>970</x>
+      <y>70</y>
+      <w>210</w>
+      <h>320</h>
+    </coordinates>
+    <panel_attributes>User Class
+--
+           -user_id: int
+           -user_name: string
+           -user_password: string
+           -user_email: string
+           -user_dob: date
+           -subscription: bool
+           -sensorData: struck
+--
+
+           +verifyPass()
+           +editDetails()
+           +subcribe()
+           +payment()
+           +addField()
+           +editField()
+           +deleteField()
+           +addRoom()
+           +editRoom()
+           +deleteRoom()
+           +addPond()
+           +editPond()
+           +deletePond()
+           +syncData()
+           +browseData()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>300</y>
+      <w>190</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Livestock Class
+--
+           -l_id: int
+           -l_name: string
+           -l_discription: string
+           -l_tempreture: float
+           -l_mosture: float
+           -l__airQuality: struck
+           -l_nutrients: struck
+           -l_Illness(): string
+--
+
+           +editLivestock()
+           +getDetails()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>290</y>
+      <w>190</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Room Class
+--
+           -r_id: int
+           -r_ownerID: int
+           -r_size: float
+           -r_tempreture: float
+           -r_mosture: float
+           -f_airQuality: struck
+--
+
+           +editRoom()
+           +getDetails()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>90</y>
+      <w>190</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Crop Class
+--
+           -c_id: int
+           -c_name: string
+           -c_discription: string
+           -c_soilType: string
+           -c_tempreture: float
+           -c_mosture: float
+           -c_pH: float
+           -c_nutrients: struck
+           -c_Illness(): string
+--
+
+           +editCrops()
+           +getDetails()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>670</x>
+      <y>90</y>
+      <w>190</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Field Class
+--
+           -f_id: int
+           -f_ownerID: int
+           -f_size: float
+           -f_soilType: string
+           -f_tempreture: float
+           -f_mosture: float
+           -f_pH: float
+           -f_nutrients: struck
+--
+
+           +editField()
+           +getDetails()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1000</x>
+      <y>440</y>
+      <w>190</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Pond Class
+--
+           -p_id: int
+           -p_ownerID: int
+           -p_size: float
+           -p_tempreture: float
+           -r_pH: float
+           -f_waterQuality: struck
+--
+
+           +editPond()
+           +getDetails()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>60</x>
+      <y>470</y>
+      <w>190</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Equipment Class
+--
+           -e_id: int
+           -e_name: string
+           -e_discription: string
+           -e_price: float
+           -e_nutrients: struck
+           -e_CorpRelations: Crop
+           -e_LivestockRelations: Livestock
+--
+
+           +editLivestock()
+           +getDetails()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>170</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=n..1</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>280</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=n..1</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1080</x>
+      <y>380</y>
+      <w>50</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=n..1</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>170</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=n..1</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>260</x>
+      <y>360</y>
+      <w>80</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=n..1</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>410</y>
+      <w>50</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=n..1</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>520</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Sales Class
+--
+           -sales_id: int
+           -amount: float
+           -buyer_id: int
+           -sale_discription: string
+
+--
+           +editSales()
+           +searchSales()
+           +listSales()
+           +addSales()
+           +sendRecite()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>710</x>
+      <y>380</y>
+      <w>280</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;160.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>410</y>
+      <w>350</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>330.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>410</x>
+      <y>20</y>
+      <w>410</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>fontsize=20
+Farm Management System
+Class Diagram</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
